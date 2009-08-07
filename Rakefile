@@ -12,7 +12,6 @@ begin
     gem.rubyforge_project = "twitterland"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
     
-    gem.add_dependency('oauth', '0.3.4')
     gem.add_dependency('mash', '0.0.3')
     gem.add_dependency('httparty', '0.4.3')
     
@@ -69,7 +68,7 @@ begin
   namespace :rubyforge do
     
     desc "Release gem and RDoc documentation to RubyForge"
-    task :release => ["rubyforge:release:gem", "rubyforge:release:website", "rubyforge:release:docs"]
+    task :release => ["rubyforge:release:gem", "rubyforge:release:docs"]
     
     namespace :release do
       desc "Publish RDoc to RubyForge."
@@ -85,17 +84,6 @@ begin
         Rake::SshDirPublisher.new(host, remote_dir, local_dir).upload
       end
       
-      task :website do
-        config = YAML.load(
-            File.read(File.expand_path('~/.rubyforge/user-config.yml'))
-        )
-
-        host = "#{config['username']}@rubyforge.org"
-        remote_dir = "/var/www/gforge-projects/twitterland/"
-        local_dir = 'website'
-        
-        Rake::SshDirPublisher.new(host, remote_dir, local_dir).upload
-      end
     end
   end
 rescue LoadError
