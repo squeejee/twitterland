@@ -4,7 +4,7 @@ module Twitterland
     base_uri 'api.mrtweet.com/v1'
     format :json
     
-    attr_reader :is_user
+    attr_reader :is_user, :profile, :recommendations, :most_attention_towards
     
     def initialize(api_key, username)
       @username = username
@@ -22,19 +22,19 @@ module Twitterland
     
     def profile
       if is_user?
-        Mash.new(self.class.get("/profile/#{@username}/#{@api_key}.json")).profile
+        @profile ||= Mash.new(self.class.get("/profile/#{@username}/#{@api_key}.json")).profile
       end
     end
     
     def recommendations
       if is_user?
-        Mash.new(self.class.get("/recommendations/#{@username}/#{@api_key}.json")).recommendations
+        @recommendations ||= Mash.new(self.class.get("/recommendations/#{@username}/#{@api_key}.json")).recommendations
       end
     end
     
     def most_attention_towards
       if is_user?
-        Mash.new(self.class.get("/most_attention_towards/#{@username}/#{@api_key}.json")).most_attention_towards
+        @most_attention_towards ||= Mash.new(self.class.get("/most_attention_towards/#{@username}/#{@api_key}.json")).most_attention_towards
       end
     end
     
