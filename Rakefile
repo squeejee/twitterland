@@ -12,7 +12,6 @@ begin
     gem.rubyforge_project = "twitterland"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
     
-    gem.add_dependency('oauth', '0.3.4')
     gem.add_dependency('mash', '0.0.3')
     gem.add_dependency('httparty', '0.4.3')
     
