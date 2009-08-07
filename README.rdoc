@@ -1,0 +1,17 @@
+= twitterland
+
+Twitterland is a Ruby gem that bundles various Twitter-related APIs
+
+== examples
+  
+See the examples directory.
+
+http://github.com/squeejee/twitterland/tree/master/examples
+
+== docs
+
+http://rdoc.info/projects/squeejee/twitterland
+
+== Copyright
+
+Copyright (c) 2009 Squeejee. See LICENSE for details.
