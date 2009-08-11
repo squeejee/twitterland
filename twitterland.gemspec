@@ -2,19 +2,19 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Bradley Joyce"]
   s.date = %q{2009-08-11}
   s.email = %q{info@squeejee.com}
   s.extra_rdoc_files = [
-    "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
     "History",
      "License",
-     "README.rdoc",
+     "README.markdown",
      "Rakefile",
      "VERSION.yml",
      "lib/twitterland.rb",
