@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Bradley Joyce"]
-  s.date = %q{2009-08-11}
+  s.date = %q{2009-08-12}
   s.email = %q{info@squeejee.com}
   s.extra_rdoc_files = [
     "README.markdown"
@@ -18,12 +18,14 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION.yml",
      "lib/twitterland.rb",
+     "lib/twitterland/back_tweets.rb",
      "lib/twitterland/follow_cost.rb",
      "lib/twitterland/mrtweet.rb",
      "lib/twitterland/tweet_blocker.rb",
      "lib/twitterland/twinfluence.rb",
      "lib/twitterland/twitter_counter.rb",
      "lib/twitterland/twitter_grader.rb",
+     "test/fixtures/backtweets.json",
      "test/fixtures/follow_cost.json",
      "test/fixtures/mrtweet_is_user.json",
      "test/fixtures/mrtweet_most_attention_towards.json",
@@ -36,6 +38,7 @@ Gem::Specification.new do |s|
      "test/fixtures/twitter_counter.json",
      "test/fixtures/twitter_grader.json",
      "test/test_helper.rb",
+     "test/twitterland/back_tweets_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
@@ -50,6 +53,7 @@ Gem::Specification.new do |s|
   s.summary = %q{wrappers for various twitter apis}
   s.test_files = [
     "test/test_helper.rb",
+     "test/twitterland/back_tweets_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
