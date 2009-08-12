@@ -5,6 +5,27 @@ module Twitterland
     base_uri 'http://twittercounter.com/api'
     format :json
   
+    # Get Twitter follower stats for a user
+    #
+    #   Twitterland::TwitterCounter.show('bradleyjoyce')
+    #
+    # returns:
+    #  tomorrow_2w 
+    #  followers_2w_ago 
+    #  followers_yesterday 
+    #  followers_current 
+    #  friends_current 
+    #  next_month 
+    #  growth_since_2w  
+    #  started_followers 
+    #  rank 
+    #  user_id 
+    #  growth_since 
+    #  follow_days 
+    #  tomorrow 
+    #  next_month_2w 
+    #  average_growth 
+    #  average_growth_2w
     def self.show(username, results=365)
       stats =  get("/", :query => {:username => username, :output => 'json', :results => results})
       totals = stats.delete('followersperdate')
