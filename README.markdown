@@ -137,6 +137,23 @@ Including:
     Twitterland::TweetBlocker.rate_limit
 
     => <Mash hourly_limit=100 remaining_hits=100 reset_time="2009-08-11 23:12:41 UTC" reset_time_in_seconds=2746>
+    
+### BackTweets
+
+Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com/developers)
+
+#### Search
+    # Return tweet referencing a URL
+    results = Twitterland::BackTweets.search('http://squeejee.com', 'OU812')
+    results.tweets.size
+    => 25
+    results.tweets.first.from_user
+    => "euromarianne"
+    results.items_per_page
+    => 25
+    results.total_results
+    => 3301
+    
 
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
