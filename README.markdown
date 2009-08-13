@@ -164,5 +164,3 @@ Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com
 ### Copyright
 Copyright (c) 2009 Squeejee. See LICENSE for details.
 
-
-

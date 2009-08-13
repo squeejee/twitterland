@@ -8,7 +8,7 @@ module Twitterland
     #
     #   Twitterland::TweetBlocker.user('bradleyjoyce')
     def self.user(username)
-      @result ||= Mash.new(self.get("/username/#{username}.json")).user
+      Mash.new(self.get("/username/#{username}.json")).user
     end
     
     # Report user as spammer
