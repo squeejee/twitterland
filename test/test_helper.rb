@@ -1,9 +1,11 @@
 require 'rubygems'
 require 'test/unit'
 require 'shoulda'
-require 'matchy'
 require 'mocha'
 require 'fakeweb'
+
+gem 'jnunemaker-matchy', '0.4.0'
+require 'matchy'
 
 FakeWeb.allow_net_connect = false
 
@@ -12,6 +14,23 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'twitterland'
 
 class Test::Unit::TestCase
+  custom_matcher :be_nil do |receiver, matcher, args|
+    matcher.positive_failure_message = "Expected #{receiver} to be nil but it wasn't"
+    matcher.negative_failure_message = "Expected #{receiver} not to be nil but it was"
+    receiver.nil?
+  end
+  
+  custom_matcher :be_true do |receiver, matcher, args|
+    matcher.positive_failure_message = "Expected #{receiver} to be true but it wasn't"
+    matcher.negative_failure_message = "Expected #{receiver} not to be true but it was"
+    receiver.eql?(true)
+  end
+  
+  custom_matcher :be_false do |receiver, matcher, args|
+    matcher.positive_failure_message = "Expected #{receiver} to be false but it wasn't"
+    matcher.negative_failure_message = "Expected #{receiver} not to be false but it was"
+    receiver.eql?(false)
+  end
 end
 
 def fixture_file(filename)
