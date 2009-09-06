@@ -10,6 +10,7 @@ Including:
 * Twinfluence 
 * Twitter Counter
 * TweetBlocker
+* Thumbfight
 
 ### Install
      sudo gem install twitterland
@@ -154,7 +155,17 @@ Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com
     results.total_results
     => 3301
     
+### Thumbfight
 
+#### Usage
+    # Get follow cost for single search term
+    Twitterland::Thumbfight.fight('apple')
+    => <Mash challenger1=<Mash score="3 thumbs up" title="apple">>
+    
+    # Get follow cost for two search terms
+    Twitterland::Thumbfight.fight('apple', 'microsoft')
+    => <Mash challenger1=<Mash score="3 thumbs up" title="apple"> challenger2=<Mash score="2 thumbs up" title="microsoft">>
+    
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
 
