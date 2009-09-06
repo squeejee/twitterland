@@ -8,7 +8,7 @@ begin
     gem.summary           = %Q{wrappers for various twitter apis}
     gem.email             = "info@squeejee.com"
     gem.homepage          = "http://github.com/squeejee/twitterland"
-    gem.authors           = ["Wynn Netherland","Bradley Joyce"]
+    gem.authors           = ["Wynn Netherland","Bradley Joyce", "Ron Evans"]
     gem.rubyforge_project = "twitterland"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
     
