@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.2.1"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Wynn Netherland", "Bradley Joyce"]
-  s.date = %q{2009-08-12}
+  s.authors = ["Wynn Netherland", "Bradley Joyce", "Ron Evans"]
+  s.date = %q{2009-09-06}
   s.email = %q{info@squeejee.com}
   s.extra_rdoc_files = [
     "README.markdown"
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
      "lib/twitterland/back_tweets.rb",
      "lib/twitterland/follow_cost.rb",
      "lib/twitterland/mrtweet.rb",
+     "lib/twitterland/thumbfight.rb",
      "lib/twitterland/tweet_blocker.rb",
      "lib/twitterland/twinfluence.rb",
      "lib/twitterland/twitter_counter.rb",
@@ -32,6 +33,10 @@ Gem::Specification.new do |s|
      "test/fixtures/mrtweet_profile.json",
      "test/fixtures/mrtweet_recommendations.json",
      "test/fixtures/mrtweet_success.json",
+     "test/fixtures/thumbfight.json",
+     "test/fixtures/thumbfight2.json",
+     "test/fixtures/thumbfight2_invalid.json",
+     "test/fixtures/thumbfight_error.json",
      "test/fixtures/tweet_blocker_grade.json",
      "test/fixtures/tweet_blocker_rate_limit_status.json",
      "test/fixtures/tweet_blocker_spam.json",
@@ -41,6 +46,7 @@ Gem::Specification.new do |s|
      "test/twitterland/back_tweets_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
+     "test/twitterland/thumbfight_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/twitter_counter_test.rb",
      "test/twitterland/twitter_grader_test.rb"
@@ -56,6 +62,7 @@ Gem::Specification.new do |s|
      "test/twitterland/back_tweets_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
+     "test/twitterland/thumbfight_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/twitter_counter_test.rb",
      "test/twitterland/twitter_grader_test.rb"
