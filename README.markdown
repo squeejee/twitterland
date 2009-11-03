@@ -166,6 +166,19 @@ Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com
     Twitterland::Thumbfight.fight('apple', 'microsoft')
     => <Mash challenger1=<Mash score="3 thumbs up" title="apple"> challenger2=<Mash score="2 thumbs up" title="microsoft">>
     
+### TweetMeme
+
+#### Usage
+
+    # Get comments for a given url
+    details = Twitterland::TweetMeme.url_info('http://tweetcongress.org')
+    
+    # Get recent comments
+    comments = Twitterland::TweetMeme::Comments.firehose
+    
+    # Get popular stories
+    popular = Twitterland::TweetMeme::Stories.popular
+    
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
 
