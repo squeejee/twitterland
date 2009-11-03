@@ -11,6 +11,8 @@ Including:
 * Twitter Counter
 * TweetBlocker
 * Thumbfight
+* TweetMeme
+* FollerMe
 
 ### Install
      sudo gem install twitterland
