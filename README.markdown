@@ -181,6 +181,12 @@ Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com
     # Get popular stories
     popular = Twitterland::TweetMeme::Stories.popular
     
+### Auto Follow Friday
+
+    # get the 10 most recent tweeted-to for #followfriday
+    Twitterland::Autoff.user('mrspengwynn')
+    => ["treefrogstudios", "legalzoom", "pengwynn", "str8photography", "kriscolvin", "focalpop", "ahhphotography", "digitalps", "mully", "curvezilla"]
+    
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
 
