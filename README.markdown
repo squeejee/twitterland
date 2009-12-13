@@ -187,6 +187,13 @@ Get your api_key at [http://www.backtype.com/developers](http://www.backtype.com
     Twitterland::Autoff.user('mrspengwynn')
     => ["treefrogstudios", "legalzoom", "pengwynn", "str8photography", "kriscolvin", "focalpop", "ahhphotography", "digitalps", "mully", "curvezilla"]
     
+### Zutual
+
+You can compare what topics any two Twitter users have in common:
+
+    Twitterland::Zutual.match('pengwynn', 'adamstac')
+    => [<Mash strength=87 topic="google">, <Mash strength=87 topic="interview">, <Mash strength=67 topic="google chrome">, <Mash strength=60 topic="sass">, <Mash strength=52 topic="rsync">, <Mash strength=52 topic="rake">, <Mash strength=47 topic="gemcutter">, <Mash strength=45 topic="facebook">, <Mash strength=42 topic="wordpress deployment">, <Mash strength=42 topic="haml">, <Mash strength=42 topic="github">, <Mash strength=35 topic="dallas">, <Mash strength=32 topic="logo">, <Mash strength=32 topic="village church">, <Mash strength=32 topic="css">, <Mash strength=32 topic="mac">, <Mash strength=22 topic="tv">, <Mash strength=22 topic="fix-me">, <Mash strength=22 topic="dns">, <Mash strength=22 topic="lord">]
+    
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
 
