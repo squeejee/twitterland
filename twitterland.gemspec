@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.4.1"
+  s.version = "0.4.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Bradley Joyce", "Ron Evans"]
-  s.date = %q{2009-11-29}
+  s.date = %q{2009-12-13}
   s.email = %q{info@squeejee.com}
   s.extra_rdoc_files = [
     "README.markdown"
@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
      "lib/twitterland/twinfluence.rb",
      "lib/twitterland/twitter_counter.rb",
      "lib/twitterland/twitter_grader.rb",
+     "lib/twitterland/zutual.rb",
      "test/fixtures/autoff.json",
      "test/fixtures/backtweets.json",
      "test/fixtures/foller_me_all.json",
@@ -62,6 +63,7 @@ Gem::Specification.new do |s|
      "test/fixtures/tweet_meme_url_info.json",
      "test/fixtures/twitter_counter.json",
      "test/fixtures/twitter_grader.json",
+     "test/fixtures/zutual.json",
      "test/test_helper.rb",
      "test/twitterland/autoff_test.rb",
      "test/twitterland/back_tweets_test.rb",
@@ -72,7 +74,8 @@ Gem::Specification.new do |s|
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/tweet_meme_test.rb",
      "test/twitterland/twitter_counter_test.rb",
-     "test/twitterland/twitter_grader_test.rb"
+     "test/twitterland/twitter_grader_test.rb",
+     "test/twitterland/zutual_test.rb"
   ]
   s.homepage = %q{http://github.com/squeejee/twitterland}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -91,7 +94,8 @@ Gem::Specification.new do |s|
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/tweet_meme_test.rb",
      "test/twitterland/twitter_counter_test.rb",
-     "test/twitterland/twitter_grader_test.rb"
+     "test/twitterland/twitter_grader_test.rb",
+     "test/twitterland/zutual_test.rb"
   ]
 
   if s.respond_to? :specification_version then
