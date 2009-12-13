@@ -1,0 +1,82 @@
+{
+    "matches": [{
+        "topic": "google",
+        "strength": 87
+    },
+    {
+        "topic": "interview",
+        "strength": 87
+    },
+    {
+        "topic": "google chrome",
+        "strength": 67
+    },
+    {
+        "topic": "sass",
+        "strength": 60
+    },
+    {
+        "topic": "rsync",
+        "strength": 52
+    },
+    {
+        "topic": "rake",
+        "strength": 52
+    },
+    {
+        "topic": "gemcutter",
+        "strength": 47
+    },
+    {
+        "topic": "facebook",
+        "strength": 45
+    },
+    {
+        "topic": "wordpress deployment",
+        "strength": 42
+    },
+    {
+        "topic": "haml",
+        "strength": 42
+    },
+    {
+        "topic": "github",
+        "strength": 42
+    },
+    {
+        "topic": "dallas",
+        "strength": 35
+    },
+    {
+        "topic": "logo",
+        "strength": 32
+    },
+    {
+        "topic": "village church",
+        "strength": 32
+    },
+    {
+        "topic": "css",
+        "strength": 32
+    },
+    {
+        "topic": "mac",
+        "strength": 32
+    },
+    {
+        "topic": "tv",
+        "strength": 22
+    },
+    {
+        "topic": "fix-me",
+        "strength": 22
+    },
+    {
+        "topic": "dns",
+        "strength": 22
+    },
+    {
+        "topic": "lord",
+        "strength": 22
+    }]
+}
