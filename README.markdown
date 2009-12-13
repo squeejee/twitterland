@@ -13,6 +13,7 @@ Including:
 * Thumbfight
 * TweetMeme
 * FollerMe
+* Zutual
 
 ### Install
      sudo gem install twitterland
