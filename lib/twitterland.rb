@@ -4,7 +4,7 @@ require 'rubygems'
 gem 'mash', '0.0.3'
 require 'mash'
 
-gem 'httparty', '0.4.3'
+gem 'httparty', '0.4.5'
 require 'httparty'
 
 module Twitterland
