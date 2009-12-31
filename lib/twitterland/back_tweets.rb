@@ -8,8 +8,9 @@ module Twitterland
     # Get your api_key at http://www.backtype.com/developers
     # 
     #   Twitterland::BackTweets.search('http://squeejee.com', 'OU812')
-    def self.search(q, api_key, items_per_page=25, page=1, since_id=0)
-      rubyize_response(Mash.new(get("/search.json", :query => {:q => q, :key => api_key, :itemsperpage => items_per_page, :page => page, :since_id => since_id})))
+    def self.search(q, api_key, options={})
+      options['itemsperpage'] = options.delete(:items_per_page) if options[:items_per_page]
+      rubyize_response(Mash.new(get("/search.json", :query => {:q => q, :key => api_key}.merge(options))))
     end
     
     
