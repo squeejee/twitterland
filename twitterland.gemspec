@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.4.4"
+  s.version = "0.4.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Bradley Joyce", "Ron Evans"]
-  s.date = %q{2010-02-27}
+  s.date = %q{2010-03-03}
   s.email = %q{info@squeejee.com}
   s.extra_rdoc_files = [
     "README.markdown"
@@ -37,6 +37,7 @@ Gem::Specification.new do |s|
      "lib/twitterland/zutual.rb",
      "test/fixtures/autoff.json",
      "test/fixtures/backtweets.json",
+     "test/fixtures/backtweets_unauthenticated.json",
      "test/fixtures/foller_me_all.json",
      "test/fixtures/foller_me_hashtags.json",
      "test/fixtures/foller_me_mentions.json",
