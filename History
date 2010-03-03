@@ -1,3 +1,5 @@
+0.4.5 - Applied patch from shingara for BackTweets
+0.4.4 - Applied patch from pengwynn to update httparty dependency
 0.4.3 - Applied patch from seboslaw for BackTweets paging params
 0.4.2 - Added support for Zutual http://zutual.com
 0.4.1 - Added Auto Follow Friday support http://autoff.com
