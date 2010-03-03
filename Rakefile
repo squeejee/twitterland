@@ -11,10 +11,10 @@ begin
     gem.authors           = ["Wynn Netherland","Bradley Joyce", "Ron Evans"]
     gem.rubyforge_project = "twitterland"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
-    
+
     gem.add_dependency('mash', '0.0.3')
     gem.add_dependency('httparty', '>= 0.4.3')
-    
+
     gem.add_development_dependency('thoughtbot-shoulda')
     gem.add_development_dependency('jeremymcanally-matchy')
     gem.add_development_dependency('mocha')
@@ -52,6 +52,7 @@ task :default => :test
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
   if File.exist?('VERSION.yml')
+    require 'yaml'
     config = YAML.load(File.read('VERSION.yml'))
     version = "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
   else
@@ -67,7 +68,7 @@ end
 begin
   require 'rake/contrib/sshpublisher'
   namespace :rubyforge do
-    
+
     desc "Release gem and RDoc documentation to RubyForge"
     task :release => ["rubyforge:release:gem"]
   end
