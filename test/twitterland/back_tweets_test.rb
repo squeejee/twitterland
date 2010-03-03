@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class BackTweetsTest < Test::Unit::TestCase
   include Twitterland
-  
+
   context "Hitting the BackTweets API" do
     should "return tweets referencing a URL" do
       stub_get 'http://backtweets.com/search.json?q=http%3A%2F%2Fsqueejee.com&key=OU812', 'backtweets.json'
@@ -14,7 +14,14 @@ class BackTweetsTest < Test::Unit::TestCase
       last_tweet.id = 1642929098
       last_tweet.from_user_id = 383935
       last_tweet.from_user = 'Curvezilla'
-      
+
+    end
+
+    should "raise Invalid key if bad key" do
+      stub_get 'http://backtweets.com/search.json?q=http%3A%2F%2Fsqueejee.com&key=OU812', 'backtweets_unauthenticated.json'
+      assert_raise Twitterland::BackTweets::Unauthenticated do
+        Twitterland::BackTweets.search('http://squeejee.com',  'OU812')
+      end
     end
   end
 end

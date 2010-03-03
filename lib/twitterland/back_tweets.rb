@@ -1,22 +1,24 @@
 module Twitterland
+
   class BackTweets
     include HTTParty
     base_uri 'backtweets.com'
     format :json
-  
+
     # Return tweet referencing a URL
     # Get your api_key at http://www.backtype.com/developers
-    # 
+    #
     #   Twitterland::BackTweets.search('http://squeejee.com', 'OU812')
     def self.search(q, api_key, options={})
       options['itemsperpage'] = options.delete(:items_per_page) if options[:items_per_page]
       rubyize_response(Mash.new(get("/search.json", :query => {:q => q, :key => api_key}.merge(options))))
     end
-    
-    
+
+
     # Scrubs the response from Back Tweets to rubyize keys
     def self.rubyize_response(response)
       results = Mash.new
+      raise BackTweets::Unauthenticated.new if response.has_key?('error')
       results.total_results = response['totalresults'].to_i
       results.start_index = response['startindex']
       results.items_per_page = response['itemsperpage']
@@ -30,5 +32,8 @@ module Twitterland
       results
     end
     private_class_method :rubyize_response
+  end
+
+  class BackTweets::Unauthenticated < Exception
   end
 end
