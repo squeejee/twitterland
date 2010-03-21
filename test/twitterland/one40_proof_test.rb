@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class MrtweetTest < Test::Unit::TestCase
+class One40ProofTest < Test::Unit::TestCase
   include Twitterland
   
   context "One40Proof gem" do

@@ -1,8 +1,8 @@
 gem 'one40_proof'
 require 'one40_proof/simple'
 
-module TwitterLand
+module Twitterland
   module One40Proof; end
 end
 
-TwitterLand::One40Proof.send(:include, One40Proof) 
+Twitterland::One40Proof.send(:include, One40Proof) 
