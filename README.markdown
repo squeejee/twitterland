@@ -202,37 +202,37 @@ You can compare what topics any two Twitter users have in common:
 
 Testing ad placement while in development
 
-  ad = Twitterland::One40Proof::Test.new
+    ad = Twitterland::One40Proof::Test.new
 
-  # The Ad
-  ad.image_url
-  ad.byline
-  ad.text
+    # The Ad
+    ad.image_url
+    ad.byline
+    ad.text
 
-  # User
-  ad.user.screen_name
-  ad.user.user_id
-  ad.user.profile_image_url
-  ad.user.name
+    # User
+    ad.user.screen_name
+    ad.user.user_id
+    ad.user.profile_image_url
+    ad.user.name
 
-  # Action URLS
-  ad.action_urls.click_url
-  ad.action_urls.favorite_url   # Or ad.action_urls.favourite_url for the English
-  ad.action_urls.impression_url
-  ad.action_urls.friendship_url
-  ad.action_urls.reply_url
-  ad.action_urls.retweet_url
+    # Action URLS
+    ad.action_urls.click_url
+    ad.action_urls.favorite_url   # Or ad.action_urls.favourite_url for the English
+    ad.action_urls.impression_url
+    ad.action_urls.friendship_url
+    ad.action_urls.reply_url
+    ad.action_urls.retweet_url
 
-  # Status
-  ad.status.id
+    # Status
+    ad.status.id
 
 To get an ad for a specific user
 
-  ad = Twitterland::One40Proof::UserAd.new(:user_id => 'reddavis', :app_id => 'your app_id')
+    ad = Twitterland::One40Proof::UserAd.new(:user_id => 'reddavis', :app_id => 'your app_id')
 
 To get an ad for a specific query
 
-  ad = Twitterland::One40Proof::Search.new(:user_id => 'reddavis', :app_id => 'your app_id', :q => 'magic hats')
+    ad = Twitterland::One40Proof::Search.new(:user_id => 'reddavis', :app_id => 'your app_id', :q => 'magic hats')
 
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
