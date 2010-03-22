@@ -1,4 +1,4 @@
-# twitterland
+# Twitterland
 
 Twitterland is a Ruby gem that bundles various Twitter-related APIs
 
