@@ -14,6 +14,7 @@ Including:
 * TweetMeme
 * FollerMe
 * Zutual
+* 140Proof
 
 ### Install
      sudo gem install twitterland
@@ -194,7 +195,45 @@ You can compare what topics any two Twitter users have in common:
 
     Twitterland::Zutual.match('pengwynn', 'adamstac')
     => [<Mash strength=87 topic="google">, <Mash strength=87 topic="interview">, <Mash strength=67 topic="google chrome">, <Mash strength=60 topic="sass">, <Mash strength=52 topic="rsync">, <Mash strength=52 topic="rake">, <Mash strength=47 topic="gemcutter">, <Mash strength=45 topic="facebook">, <Mash strength=42 topic="wordpress deployment">, <Mash strength=42 topic="haml">, <Mash strength=42 topic="github">, <Mash strength=35 topic="dallas">, <Mash strength=32 topic="logo">, <Mash strength=32 topic="village church">, <Mash strength=32 topic="css">, <Mash strength=32 topic="mac">, <Mash strength=22 topic="tv">, <Mash strength=22 topic="fix-me">, <Mash strength=22 topic="dns">, <Mash strength=22 topic="lord">]
-    
+
+### 140 Proof
+
+#### Usage
+
+Testing ad placement while in development
+
+  ad = Twitterland::One40Proof::Test.new
+
+  # The Ad
+  ad.image_url
+  ad.byline
+  ad.text
+
+  # User
+  ad.user.screen_name
+  ad.user.user_id
+  ad.user.profile_image_url
+  ad.user.name
+
+  # Action URLS
+  ad.action_urls.click_url
+  ad.action_urls.favorite_url   # Or ad.action_urls.favourite_url for the English
+  ad.action_urls.impression_url
+  ad.action_urls.friendship_url
+  ad.action_urls.reply_url
+  ad.action_urls.retweet_url
+
+  # Status
+  ad.status.id
+
+To get an ad for a specific user
+
+  ad = Twitterland::One40Proof::UserAd.new(:user_id => 'reddavis', :app_id => 'your app_id')
+
+To get an ad for a specific query
+
+  ad = Twitterland::One40Proof::Search.new(:user_id => 'reddavis', :app_id => 'your app_id', :q => 'magic hats')
+
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
 
