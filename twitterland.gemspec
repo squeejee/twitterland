@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitterland}
-  s.version = "0.4.5"
+  s.version = "0.4.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Wynn Netherland", "Bradley Joyce", "Ron Evans"]
-  s.date = %q{2010-03-03}
-  s.email = %q{info@squeejee.com}
+  s.date = %q{2010-04-04}
+  s.email = %q{wynn.netherland@gmail.com}
   s.extra_rdoc_files = [
     "README.markdown"
   ]
@@ -23,9 +23,11 @@ Gem::Specification.new do |s|
      "lib/twitterland.rb",
      "lib/twitterland/autoff.rb",
      "lib/twitterland/back_tweets.rb",
+     "lib/twitterland/cadmus.rb",
      "lib/twitterland/foller_me.rb",
      "lib/twitterland/follow_cost.rb",
      "lib/twitterland/mrtweet.rb",
+     "lib/twitterland/one40_proof.rb",
      "lib/twitterland/thumbfight.rb",
      "lib/twitterland/tweet_blocker.rb",
      "lib/twitterland/tweet_meme/analytics.rb",
@@ -38,6 +40,7 @@ Gem::Specification.new do |s|
      "test/fixtures/autoff.json",
      "test/fixtures/backtweets.json",
      "test/fixtures/backtweets_unauthenticated.json",
+     "test/fixtures/cadmus.json",
      "test/fixtures/foller_me_all.json",
      "test/fixtures/foller_me_hashtags.json",
      "test/fixtures/foller_me_mentions.json",
@@ -68,9 +71,11 @@ Gem::Specification.new do |s|
      "test/test_helper.rb",
      "test/twitterland/autoff_test.rb",
      "test/twitterland/back_tweets_test.rb",
+     "test/twitterland/cadmus_test.rb",
      "test/twitterland/foller_me_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
+     "test/twitterland/one40_proof_test.rb",
      "test/twitterland/thumbfight_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/tweet_meme_test.rb",
@@ -78,7 +83,7 @@ Gem::Specification.new do |s|
      "test/twitterland/twitter_grader_test.rb",
      "test/twitterland/zutual_test.rb"
   ]
-  s.homepage = %q{http://github.com/squeejee/twitterland}
+  s.homepage = %q{http://github.com/pengwynn/twitterland}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{twitterland}
@@ -88,9 +93,11 @@ Gem::Specification.new do |s|
     "test/test_helper.rb",
      "test/twitterland/autoff_test.rb",
      "test/twitterland/back_tweets_test.rb",
+     "test/twitterland/cadmus_test.rb",
      "test/twitterland/foller_me_test.rb",
      "test/twitterland/follow_cost_test.rb",
      "test/twitterland/mrtweet_test.rb",
+     "test/twitterland/one40_proof_test.rb",
      "test/twitterland/thumbfight_test.rb",
      "test/twitterland/tweet_blocker_test.rb",
      "test/twitterland/tweet_meme_test.rb",
@@ -104,30 +111,33 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<mash>, ["= 0.0.3"])
+      s.add_runtime_dependency(%q<hashie>, [">= 0.2.0"])
       s.add_runtime_dependency(%q<httparty>, [">= 0.4.3"])
+      s.add_runtime_dependency(%q<one40_proof>, [">= 0.0.3"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
       s.add_development_dependency(%q<jeremymcanally-matchy>, [">= 0"])
       s.add_development_dependency(%q<mocha>, [">= 0"])
       s.add_development_dependency(%q<fakeweb>, [">= 0"])
-      s.add_development_dependency(%q<mash>, [">= 0"])
+      s.add_development_dependency(%q<hashie>, [">= 0"])
     else
-      s.add_dependency(%q<mash>, ["= 0.0.3"])
+      s.add_dependency(%q<hashie>, [">= 0.2.0"])
       s.add_dependency(%q<httparty>, [">= 0.4.3"])
+      s.add_dependency(%q<one40_proof>, [">= 0.0.3"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
       s.add_dependency(%q<jeremymcanally-matchy>, [">= 0"])
       s.add_dependency(%q<mocha>, [">= 0"])
       s.add_dependency(%q<fakeweb>, [">= 0"])
-      s.add_dependency(%q<mash>, [">= 0"])
+      s.add_dependency(%q<hashie>, [">= 0"])
     end
   else
-    s.add_dependency(%q<mash>, ["= 0.0.3"])
+    s.add_dependency(%q<hashie>, [">= 0.2.0"])
     s.add_dependency(%q<httparty>, [">= 0.4.3"])
+    s.add_dependency(%q<one40_proof>, [">= 0.0.3"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     s.add_dependency(%q<jeremymcanally-matchy>, [">= 0"])
     s.add_dependency(%q<mocha>, [">= 0"])
     s.add_dependency(%q<fakeweb>, [">= 0"])
-    s.add_dependency(%q<mash>, [">= 0"])
+    s.add_dependency(%q<hashie>, [">= 0"])
   end
 end
 
