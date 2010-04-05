@@ -41,6 +41,7 @@ end
 
 directory = File.expand_path(File.dirname(__FILE__))
 
+require File.join(directory, 'twitterland', 'cadmus')
 require File.join(directory, 'twitterland', 'zutual')
 require File.join(directory, 'twitterland', 'autoff')
 require File.join(directory, 'twitterland', 'foller_me')
