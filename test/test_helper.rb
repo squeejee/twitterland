@@ -3,6 +3,7 @@ require 'test/unit'
 require 'shoulda'
 require 'mocha'
 require 'fakeweb'
+require 'redgreen'
 
 gem 'jnunemaker-matchy', '0.4.0'
 require 'matchy'

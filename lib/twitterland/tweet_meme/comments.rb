@@ -9,14 +9,14 @@ module Twitterland
       #
       #   Twitterland::TweetMeme::Comments.firehose
       def self.firehose(options={})
-        Mash.new get("/firehose.json")
+        Hashie::Mash.new get("/firehose.json")
       end
       
       # Returns comments posted on a particular URL
       # 
       #   Twitterland::TweetMeme.get_url('http://squeejee.com')
       def self.get_url(url)
-        Mash.new get("/get_url.json", :query => {:url => url})
+        Hashie::Mash.new get("/get_url.json", :query => {:url => url})
       end
       
     end

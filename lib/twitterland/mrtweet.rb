@@ -17,7 +17,7 @@ module Twitterland
     #
     #   Twitterland::Mrtweet.new(api_key,'bradleyjoyce').is_user
     def is_user
-      Mash.new(self.class.get("/is_user/#{@username}/#{@api_key}.json")).is_user
+      Hashie::Mash.new(self.class.get("/is_user/#{@username}/#{@api_key}.json")).is_user
     end
     
     # Check whether the given user is a MrTweet user (caches first request)
@@ -32,7 +32,7 @@ module Twitterland
     #   Twitterland::Mrtweet.new(api_key,'bradleyjoyce').profile
     def profile
       if is_user?
-        @profile ||= Mash.new(self.class.get("/profile/#{@username}/#{@api_key}.json")).profile
+        @profile ||= Hashie::Mash.new(self.class.get("/profile/#{@username}/#{@api_key}.json")).profile
       end
     end
     
@@ -41,7 +41,7 @@ module Twitterland
     #   Twitterland::Mrtweet.new(api_key,'bradleyjoyce').recommendations
     def recommendations
       if is_user?
-        @recommendations ||= Mash.new(self.class.get("/recommendations/#{@username}/#{@api_key}.json")).recommendations
+        @recommendations ||= Hashie::Mash.new(self.class.get("/recommendations/#{@username}/#{@api_key}.json")).recommendations
       end
     end
     
@@ -51,7 +51,7 @@ module Twitterland
     #   Twitterland::Mrtweet.new(api_key,'bradleyjoyce').most_attention_towards
     def most_attention_towards
       if is_user?
-        @most_attention_towards ||= Mash.new(self.class.get("/most_attention_towards/#{@username}/#{@api_key}.json")).most_attention_towards
+        @most_attention_towards ||= Hashie::Mash.new(self.class.get("/most_attention_towards/#{@username}/#{@api_key}.json")).most_attention_towards
       end
     end
     
@@ -62,7 +62,7 @@ module Twitterland
     #   Twitterland::Mrtweet.new(api_key,'bradleyjoyce').recommend(reason,friend_name)
     def recommend(reason, friend_name)
       if is_user?
-        Mash.new(self.class.post("/recommend/#{@username}/#{@api_key}.json", :body => { :reason => reason, :friend_name => friend_name})).status == "success"
+        Hashie::Mash.new(self.class.post("/recommend/#{@username}/#{@api_key}.json", :body => { :reason => reason, :friend_name => friend_name})).status == "success"
       end
     end
    

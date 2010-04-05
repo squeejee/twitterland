@@ -6,13 +6,13 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name              = "twitterland"
     gem.summary           = %Q{wrappers for various twitter apis}
-    gem.email             = "info@squeejee.com"
-    gem.homepage          = "http://github.com/squeejee/twitterland"
+    gem.email             = "wynn.netherland@gmail.com"
+    gem.homepage          = "http://github.com/pengwynn/twitterland"
     gem.authors           = ["Wynn Netherland","Bradley Joyce", "Ron Evans"]
     gem.rubyforge_project = "twitterland"
     gem.files             = FileList["[A-Z]*", "{examples,lib,test}/**/*"]
 
-    gem.add_dependency('mash', '0.0.3')
+    gem.add_dependency('hashie', '>= 0.2.0')
     gem.add_dependency('httparty', '>= 0.4.3')
     gem.add_dependency('one40_proof', '>= 0.0.3')
 
@@ -20,7 +20,7 @@ begin
     gem.add_development_dependency('jeremymcanally-matchy')
     gem.add_development_dependency('mocha')
     gem.add_development_dependency('fakeweb')
-    gem.add_development_dependency('mash')
+    gem.add_development_dependency('hashie')
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

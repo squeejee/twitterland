@@ -11,7 +11,7 @@ module Twitterland
       params = {}
       params[:challenger1] = args[0] if args[0]
       params[:challenger2] = args[1] if args[1]
-      Mash.new get("/fight.json", :query => params)
+      Hashie::Mash.new get("/fight.json", :query => params)
     end
   
   end

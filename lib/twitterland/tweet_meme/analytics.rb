@@ -11,7 +11,7 @@ module Twitterland
       #
       #   Twitterland::TweetMeme::Analytics.build(1234, 'OU812', 'http://tweetcongress.org')
       def self.build(app_id, api_key, url)
-        Mash.new(get("/build.json", :query => {:appid => app_id, :apikey => api_key, :url => url})).uid
+        Hashie::Mash.new(get("/build.json", :query => {:appid => app_id, :apikey => api_key, :url => url})).uid
       end
       
       # Returns a list of all Analytics that you have built, optionally filtered by domain. Accessible to anyone with an App ID and App Key.
@@ -20,7 +20,7 @@ module Twitterland
       def self.built(app_id, api_key, url=nil)
         options = {:appid => app_id, :apikey => api_key}
         options.merge({:url => url}) unless url.blank?
-        Mash.new get("/built.json", :query => options)
+        Hashie::Mash.new get("/built.json", :query => options)
       end
       
       # Returns the HTML to display the built Analytics to the user. 
@@ -29,7 +29,7 @@ module Twitterland
       #
       #   Twitterland::TweetMeme::Analytics.get(1234, 'OU812', '37758bd44025edb222022dcd1491c29g')
       def self.get_data(app_id, api_key, uid)
-         Mash.new get("/get.json", :query => {:appid => app_id, :apikey => api_key, :uid => uid})
+         Hashie::Mash.new get("/get.json", :query => {:appid => app_id, :apikey => api_key, :uid => uid})
       end
       
     end

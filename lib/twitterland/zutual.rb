@@ -5,7 +5,7 @@ module Twitterland
     format :json
   
     def self.match(first_user, second_user)
-      Mash.new(get("/twitter/match/#{first_user}+#{second_user}.json")).matches
+      Hashie::Mash.new(get("/twitter/match/#{first_user}+#{second_user}.json")).matches
     end
   end
 end

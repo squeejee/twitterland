@@ -13,7 +13,7 @@ module Twitterland
     #
     #   Twitterland::Twinfluence.new(username,password)
     def user(id, cacheonly=true)
-      Mash.new Twinfluence.post("/api_user.php", :body => {:id => id, :user => @username, :pwd => @password, :cacheonly => cacheonly})
+      Hashie::Mash.new Twinfluence.post("/api_user.php", :body => {:id => id, :user => @username, :pwd => @password, :cacheonly => cacheonly})
     end
     
     # Search Twinfluence users
@@ -25,7 +25,7 @@ module Twitterland
     #
     #   Twitterland::Twinfluence.search(username,password)
     def search(id, options={})
-      Mash.new Twinfluence.post("/api_search.php", :body => {:user => @username, :pwd => @password}.merge(options))
+      Hashie::Mash.new Twinfluence.post("/api_search.php", :body => {:user => @username, :pwd => @password}.merge(options))
     end
   
   end

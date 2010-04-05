@@ -14,7 +14,7 @@ module Twitterland
       # 
       #   Twitterland::TweetMeme::Stories.popular(options)
       def self.popular(options={})
-        Mash.new get("/popular.json", :query => options)
+        Hashie::Mash.new get("/popular.json", :query => options)
       end
       
       # Returns the most recent stories found by TweetMeme.
@@ -26,7 +26,7 @@ module Twitterland
       # 
       #   Twitterland::TweetMeme::Stories.recent(options)
       def self.recent(options={})
-        Mash.new get("/recent.json", :query => options)
+        Hashie::Mash.new get("/recent.json", :query => options)
       end
       
       # Returns a list of categories down to the specified depth, optionally filtered by a parent category.
@@ -36,7 +36,7 @@ module Twitterland
       # 
       #   Twitterland::TweetMeme::Stories.categories(options)
       def self.categories(options={})
-        Mash.new get("/categories.json", :query => options)
+        Hashie::Mash.new get("/categories.json", :query => options)
       end
       
       # Returns 10 tweets for the specified URL.
@@ -46,7 +46,7 @@ module Twitterland
       # 
       #   Twitterland::TweetMeme::Stories.tweets(url, from_id)
       def self.tweets(url, from_id=0)
-        Mash.new get("/tweets.json", :query => {:url => url, :from_id => from_id})
+        Hashie::Mash.new get("/tweets.json", :query => {:url => url, :from_id => from_id})
       end
       
     end

@@ -8,7 +8,7 @@ module Twitterland
     #
     #   Twitterland::FollowCost.show('bradleyjoyce')
     def self.show(username)
-      Mash.new get("/#{username}.json")
+      Hashie::Mash.new get("/#{username}.json")
     end
   
   end

@@ -54,7 +54,7 @@ module Twitterland
       options = options.to_hash.to_mash
       terms = options.delete('terms')
       terms ||= 'all'
-      result = Mash.new get("/#{username}/#{terms}.json", :query => options)
+      result = Hashie::Mash.new get("/#{username}/#{terms}.json", :query => options)
       case terms
       when 'all'
         result.topics ||= result.delete('terms_topics')

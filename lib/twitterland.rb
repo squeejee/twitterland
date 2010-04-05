@@ -1,11 +1,9 @@
 require 'forwardable'
 require 'rubygems'
-
-gem 'mash', '0.0.3'
-require 'mash'
-
-gem 'httparty', '>= 0.4.5'
+require 'hashie'
 require 'httparty'
+
+Hash.send :include, Hashie::HashExtensions
 
 module Twitterland
   class TwitterError < StandardError
@@ -34,7 +32,7 @@ module Twitterland
     # 
     #   Twitterland::TweetMeme.url_info('http://squeejee.com')
     def self.url_info(url)
-      Mash.new get("/url_info.json", :query => {:url => url})
+      Hashie::Mash.new get("/url_info.json", :query => {:url => url})
     end
     
   end

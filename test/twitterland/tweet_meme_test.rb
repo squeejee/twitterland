@@ -1,6 +1,5 @@
 class TweetMemeTest < Test::Unit::TestCase
-  include Twitterland
-  
+
   context "When hitting the Core API" do
 
     should "display details for a url" do

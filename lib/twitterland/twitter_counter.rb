@@ -29,7 +29,7 @@ module Twitterland
     def self.show(username, results=365)
       stats =  get("/", :query => {:username => username, :output => 'json', :results => results})
       totals = stats.delete('followersperdate')
-      stats = Mash.new stats
+      stats = Hashie::Mash.new stats
       # map values to integers because strings are a PIA for stats
       [
         "tomorrow_2w", 

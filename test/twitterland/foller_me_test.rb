@@ -8,9 +8,8 @@ class FollerMeTest < Test::Unit::TestCase
     should "should display all terms for a user" do
       stub_get('http://api.foller.me/pengwynn/all.json', 'foller_me_all.json')
       result = Twitterland::FollerMe.terms('pengwynn')
-      result.topics.keys.size.should == 51
-      result.topics.keys.first.should == 'saints'
-      result.topics.values.first.popularity.should == 2
+      result.topics.keys.size.should == 818
+      result.topics.firefox.popularity.should == 2
     end
     
     should "should allow options" do
@@ -22,9 +21,8 @@ class FollerMeTest < Test::Unit::TestCase
     should "should display topics for a user" do
       stub_get('http://api.foller.me/pengwynn/topics.json', 'foller_me_topics.json')
       result = Twitterland::FollerMe.topics('pengwynn')
-      result.topics.keys.size.should == 51
-      result.topics.keys.first.should == 'saints'
-      result.topics.values.first.popularity.should == 2
+      result.topics.keys.size.should == 818
+      result.topics.firefox.popularity.should == 2
     end
     
     should "should display mentions for a user" do
@@ -39,8 +37,7 @@ class FollerMeTest < Test::Unit::TestCase
       stub_get('http://api.foller.me/pengwynn/hashtags.json', 'foller_me_hashtags.json')
       result = Twitterland::FollerMe.hashtags('pengwynn')
       result.hashtags.keys.size.should == 25
-      result.hashtags.keys.first.should == '#typos'
-      result.hashtags.values.first.popularity.should == 1
+      result.hashtags['#typos'].popularity.should == 1
     end
   end
   
