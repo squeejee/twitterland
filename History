@@ -1,3 +1,6 @@
+0.4.6
+  - Patch from reddavis to add one40proof support
+  - Cadmus support http://thecadmus.com
 0.4.5 - Applied patch from shingara for BackTweets
 0.4.4 - Applied patch from pengwynn to update httparty dependency
 0.4.3 - Applied patch from seboslaw for BackTweets paging params

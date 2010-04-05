@@ -4,17 +4,18 @@ Twitterland is a Ruby gem that bundles various Twitter-related APIs
 
 Including:
 
-* Follow Cost
-* Twitter Grader
-* Mr. Tweet
-* Twinfluence 
-* Twitter Counter
-* TweetBlocker
-* Thumbfight
-* TweetMeme
-* FollerMe
-* Zutual
-* 140Proof
+* [Follow Cost](http://followcost.com/)
+* [Twitter Grader](http://twitter.grader.com/)
+* [Mr. Tweet](http://mrtweet.com/)
+* [Twinfluence](http://twinfluence.com/) 
+* [Twitter Counter](http://twittercounter.com)
+* [TweetBlocker](http://tweetblocker.com)
+* [Thumbfight](http://thumbfight.com)
+* [TweetMeme](http://tweetmeme.com)
+* [FollerMe](http://foller.me)
+* [Zutual](http://www.zutual.com/)
+* [140Proof](http://140proof.com/)
+* [Cadmus](http://thecadmus.com)
 
 ### Install
      sudo gem install twitterland
@@ -233,6 +234,11 @@ To get an ad for a specific user
 To get an ad for a specific query
 
     ad = Twitterland::One40Proof::Search.new(:user_id => 'reddavis', :app_id => 'your app_id', :q => 'magic hats')
+    
+### Cadmus
+
+    # get posts in a user's stream including related tweets and comments
+    posts = Twitterland::Cadmus.posts(:key => 'OU812', :count => 30, :page => 2)
 
 ### Source
 [http://github.com/squeejee/twitterland/](http://github.com/squeejee/twitterland/)
