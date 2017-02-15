@@ -2,6 +2,8 @@
 
 Twitterland is a Ruby gem that bundles various Twitter-related APIs
 
+[![API Testing](https://img.shields.io/badge/test%20this%20API%20on-RapidAPI.com-blue.svg)](https://rapidapi.com/package/Twitter/functions?utm_source=GithubTwitter&utm_medium=button)
+
 Including:
 
 * [Follow Cost](http://followcost.com/)
